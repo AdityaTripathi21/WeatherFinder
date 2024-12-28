@@ -9,13 +9,13 @@
 <body>
     <header>
         <div class="logoTitleContainer">
-            <img class="logo" src="reshot-icon-weather-EJPNZMV8U5.svg" alt="logo">
+            <img class="logo" src="assets/reshot-icon-weather-EJPNZMV8U5.svg" alt="logo">
             <h1>WeatherFinder</h1>
         </div>
         <nav>
             <ul class="navLinks">
                 <li>
-                    <img class="menu" src="icons8-menu.svg" alt="menu">
+                    <img class="menu" src="assets/white-question-mark-svgrepo-com.svg" alt="menu">
                 </li>
             </ul>
         </nav>
@@ -23,14 +23,22 @@
     <div class="contentContainer">
         <form class="weatherForm">
             <input type="text" class="userInput" placeholder="Enter City">
-            <button type="submit" class="buttonSubmit">Submit</button>
+            <button type="submit" class="buttonSubmit"><img src="assets/magnifying-glass-svgrepo-com.svg"></button>
         </form>
-        <div class="cityContainer">
+        <div class="errorContainer" style="display: none;"></div>
+        <div class="cityContainer" style="display: none;">
             <img src="" alt="forecast" class="forecastImage">
-            <h2 class="cityTemp">33°F</h2>
-            <h3 class="cityName">Plainsboro</h3>
-            <p class="cityHumidity">82%</p>
+            <p class="weatherConditions"></p>
+            <h2 class="cityTemp"></h2>
+            <h3 class="cityName"></h3>
+            <div class="miscCityContainer">
+                <p class="cityMiscInfo humidity"></p>
+                <p class="cityMiscInfo wind-speed"></p>
+                <p class="cityMiscInfo sunrise"></p>
+                <p class="cityMiscInfo sunset"></p>
+            </div>
         </div>
         </div>
+    <script src="index.js"></script>
 </body>
 </html>
