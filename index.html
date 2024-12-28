@@ -1,44 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="logoTitleContainer">
-            <img class="logo" src="assets/reshot-icon-weather-EJPNZMV8U5.svg" alt="logo">
-            <h1>WeatherFinder</h1>
-        </div>
-        <nav>
-            <ul class="navLinks">
-                <li>
-                    <img class="menu" src="assets/white-question-mark-svgrepo-com.svg" alt="menu">
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="contentContainer">
-        <form class="weatherForm">
-            <input type="text" class="userInput" placeholder="Enter City">
-            <button type="submit" class="buttonSubmit"><img src="assets/magnifying-glass-svgrepo-com.svg"></button>
-        </form>
-        <div class="errorContainer" style="display: none;"></div>
-        <div class="cityContainer" style="display: none;">
-            <img src="" alt="forecast" class="forecastImage">
-            <p class="weatherConditions"></p>
-            <h2 class="cityTemp"></h2>
-            <h3 class="cityName"></h3>
-            <div class="miscCityContainer">
-                <p class="cityMiscInfo humidity"></p>
-                <p class="cityMiscInfo wind-speed"></p>
-                <p class="cityMiscInfo sunrise"></p>
-                <p class="cityMiscInfo sunset"></p>
-            </div>
-        </div>
-        </div>
-    <script src="index.js"></script>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #20282e;
+    ;
+}
+
+body {
+    background-color: #263541;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+}
+
+.menu {
+    width: 25px;
+    height: 25px;
+
+}
+
+.navLinks {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+.logoTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+h1 {
+    font-size: 30px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contentContainer {
+    margin-top: 30px;
+    background: linear-gradient(rgb(5, 19, 53), rgb(6, 1, 17));
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.weatherForm {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.userInput {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(231, 245, 247);
+}
+
+.buttonSubmit {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(231, 245, 247);
+
+}
+
+.buttonSubmit img {
+    width: 30px;
+    height: 30px;
+}
+
+.buttonSubmit:hover {
+    background-color: aliceblue;
+}
+
+.errorContainer {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cityContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.forecastImage {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+    
+
+.cityTemp {
+    font-size: 4rem;
+}
+
+.cityName {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.miscCityContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+
+
